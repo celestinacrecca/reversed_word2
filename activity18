@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+    char str[50];
+    int i,j,a,b;
+        printf("Enter a string:");
+        gets(str);
+
+        printf("Original string:");
+        puts(str);
+
+
+            for(a=0; str[a]!=0; a++);
+            for(i=0, j=a-1; i<j; i++, j--){
+                b=str[i];
+                str[i]=str[j];
+                str[j]=b;
+            }
+
+                printf("Reversed string: %s", str);
+
+    return 0;
+}
